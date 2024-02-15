@@ -1,0 +1,39 @@
+class AgileModel:
+    def __init__(self):
+        pass
+
+    def work_on_tasks(self):
+        tasks = self.get_tasks()
+        for task in tasks:
+            self.work_on(task)
+
+    def get_tasks(self):
+        # In Agile, tasks would come from a backlog or some other source
+        return [
+            "User story 1",
+            "User story 2",
+            "User story 3"
+        ]
+
+    def work_on(self, task):
+        print("Working on: {}".format(task))
+        self.define_requirements(task)
+        self.design_model(task)
+        self.implement_model(task)
+        self.test_model(task)
+
+    def define_requirements(self, task):
+        print("Define requirements for: {}".format(task))
+
+    def design_model(self, task):
+        print("Design the model for: {}".format(task))
+
+    def implement_model(self, task):
+        print("Implement the model for: {}".format(task))
+
+    def test_model(self, task):
+        print("Test the model for: {}".format(task))
+
+
+agile_model = AgileModel()
+agile_model.work_on_tasks()
